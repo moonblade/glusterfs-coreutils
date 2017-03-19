@@ -44,6 +44,7 @@
 #include "glfs-rm.h"
 #include "glfs-stat.h"
 #include "glfs-tail.h"
+#include "glfs-link.h"
 #include "glfs-util.h"
 
 #define AUTHORS "Written by Craig Cabrey."
@@ -73,6 +74,7 @@ shell_usage ()
                 "* rm\n"
                 "* stat\n"
                 "* tail\n"
+                "* link\n"
                 "* flock\n");
 
         return 0;
@@ -93,6 +95,7 @@ static struct cmd const cmds[] =
         { .alias = "gfrm", .name = "rm", .execute = do_rm },
         { .alias = "gfstat", .name = "stat", .execute = do_stat },
         { .alias = "gftail", .name = "tail", .execute = do_tail },
+        { .alias = "gflink", .name = "link", .execute = do_link },
         { .name = "flock", .execute = do_flock }
 };
 
